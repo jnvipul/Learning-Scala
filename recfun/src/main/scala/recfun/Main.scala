@@ -15,28 +15,20 @@ object Main {
   /**
    * Exercise 1
    */
-    def pascal(c: Int, r: Int): Int = r match {
-      case n : Int => {
-        var all = ListBuffer[ListBuffer[Int]]()
-        var last = ListBuffer[Int]()
-        last += 1
-        all += last
-        for (i <- 1 to r) {
-          var current = ListBuffer[Int]()
-          current += last(0)
-          for (j <- 1 until i){
-//            if(r == i && c == j){
-//              ( last(j - 1) + last(j) )
-//            }
-            current += ( last(j - 1) + last(j) )
-          }
-          current += last(0)
-//          print(current)
-          all += current
-          last = current
+    def pascal(c: Int, r: Int): Int = {
+
+      def factorial(n : Int): Int = {
+        if(n < 0){
+          0
+        }else if(n == 0 || n == 1){
+          1
+        }else{
+          n * factorial(n-1)
         }
-        all(r)(c)
+
       }
+
+      factorial(r)/(factorial(r-c) * factorial(c))
     }
 
   
