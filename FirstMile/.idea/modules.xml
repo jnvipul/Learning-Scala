@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/firstmile.iml" filepath="$PROJECT_DIR$/.idea/modules/firstmile.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/firstmile-build.iml" filepath="$PROJECT_DIR$/.idea/modules/firstmile-build.iml" />
     </modules>
   </component>
 </project>
