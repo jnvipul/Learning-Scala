@@ -24,7 +24,7 @@ object Main {
           1
         }else{
           n * factorial(n-1)
-        }
+        }  
 
       }
 
