@@ -10,8 +10,13 @@ object Main {
         print(pascal(col, row) + " ")
       println()
     }
-    val c : List[Char] = List('(', 'e', 's', ')')
-    print(balance(c))
+
+    println(balance("fhkj(fdal".toList))
+    println(balance("fhkj(f)dal".toList))
+    println(balance("((fhkj(fdal)".toList))
+    println(balance("fhkj)(fdal".toList))
+    println(balance("fhkjfdal".toList))
+
   }
 
   /**
