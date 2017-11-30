@@ -10,8 +10,13 @@ object Main {
         print(pascal(col, row) + " ")
       println()
     }
-    val c : List[Char] = List('(', 'e', 's', ')')
-    print(balance(c))
+
+    println(balance("fhkj(fdal".toList))
+    println(balance("fhkj(f)dal".toList))
+    println(balance("((fhkj(fdal)".toList))
+    println(balance("fhkj)(fdal".toList))
+    println(balance("fhkjfdal".toList))
+
   }
 
   /**
@@ -56,5 +61,12 @@ object Main {
   /**
    * Exercise 3
    */
-    def countChange(money: Int, coins: List[Int]): Int = ???
+    def countChange(money: Int, coins: List[Int]): Int = {
+      if(money == 0)
+        1
+      else if(money > 0 && !coins.isEmpty)
+        countChange(money - coins.head, coins) + countChange(money, coins.tail)
+      else
+        0
+    }
   }
